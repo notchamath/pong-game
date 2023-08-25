@@ -33,7 +33,7 @@ while is_game_on:
     # Run animations
     screen.update()
     # Slow down animation
-    time.sleep(0.1)
+    time.sleep(ball.play_speed)
 
     ball.move()
 
