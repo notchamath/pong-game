@@ -1,3 +1,4 @@
+import time
 from turtle import Screen
 from paddle import Paddle
 from ball import Ball
@@ -29,6 +30,14 @@ is_game_on = True
 while is_game_on:
     # Run animations
     screen.update()
+    # Slow down animation
+    time.sleep(0.1)
+
     ball.move()
+
+    # Detect collision with walls
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce()
+
 
 screen.exitonclick()
